@@ -1,2 +1,2 @@
 # pern-blog
-News blog with moderators ans users
+News blog with moderators and users
