@@ -2,6 +2,7 @@ import express from "express"
 import {db} from "./db.js";
 import {User, Post} from "./models/models.js";
 import cors from "cors"
+import {router} from "./routes/index.js";
 
 import dotenv from 'dotenv';
 dotenv.config()
@@ -16,6 +17,8 @@ app.use(express.json())
 app.get('/', (req, res) => {
   res.status(200).json({message: "Работает!"})
 })
+
+app.use('/api', router)
 
 const start = async () => {
   try {
