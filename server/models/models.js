@@ -8,7 +8,7 @@ const User = db.define('user', {
   password: {type: DataTypes.STRING},
   role: {type: DataTypes.STRING, defaultValue: 'USER'},
   imageUrl: {type: DataTypes.STRING},
-    rang: {type: DataTypes.INTEGER, defaultValue: 0},
+  rang: {type: DataTypes.INTEGER, defaultValue: 0},
 })
 
 const Category = db.define('category', {
@@ -31,7 +31,6 @@ const RatingPost = db.define('rating_post', {
 const PostCategory = db.define('post_category', {
   id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
 })
-
 
 
 User.hasMany(Post)

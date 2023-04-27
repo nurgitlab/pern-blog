@@ -5,6 +5,7 @@ import cors from "cors"
 import {router} from "./routes/index.js";
 
 import dotenv from 'dotenv';
+
 dotenv.config()
 
 const port = process.env.PORT
@@ -24,7 +25,7 @@ const start = async () => {
   try {
     await sequelize.authenticate()
     await sequelize.sync()
-    app.listen(port,() => console.log(`Started on PORT:${port}`))
+    app.listen(port, () => console.log(`Started on PORT:${port}`))
   } catch (e) {
     console.log(e?.message)
   }
